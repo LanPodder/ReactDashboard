@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LanPodder's React Dashboard
+
+Creating this to reduce the ammount of future boilerplate code i have to write when going on hackathons or having to create dashboards at work.
+Chose react purely to learn.
 
 ## Available Scripts
 

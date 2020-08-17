@@ -3,14 +3,25 @@ import './SideMenu.css';
 import MenuItem from './MenuItem';
 import SubmenuItem from './SubmenuItem';
 
-class SideMenu extends React.Component {
-    constructor(props: any) {
+interface SideMenuState{
+    active: boolean,
+}
+
+interface SideMenuProps{
+
+}
+
+class SideMenu extends React.Component<SideMenuProps, SideMenuState> {
+    constructor(props: SideMenuProps) {
         super(props);
-        this.state = {  };
+        this.state = { 
+            active: false,
+        };
     }
     render() {
         return (
-            <nav id="sidemenu">
+            <nav id="sidemenu" className={this.state.active ? 'active':''}>
+                
                 <div className="p-4 pt-5">
                     <ul className="collapse list-unstyled mb-5">
                         <MenuItem linkto="/" itemname="Home" />
@@ -25,6 +36,12 @@ class SideMenu extends React.Component {
                 </div>
             </nav>
         );
+    }
+
+    toggleActive(){
+        this.setState((currentState) => ({
+            active: !currentState.active,
+        }))
     }
 }
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface SideMenuToggleButtonProps{
     togglebuttonid: string,
-
 }
+
 class SideMenuToggleButton extends React.Component<SideMenuToggleButtonProps> {
     render() {
         return (

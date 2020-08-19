@@ -1,0 +1,47 @@
+#sidemenu {
+    min-width: 300px;
+    max-width: 300px;
+    height: 100vh;
+    background: #1d1919;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#sidemenu.active {
+    margin-left: -300px;
+}
+
+#sidemenu ul.components {
+    padding: 0;
+}
+
+#sidemenu ul li {
+    font-size: 16px;
+}
+
+#sidemenu ul li a {
+    padding: 10px 0;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#sidemenu ul li a:hover {
+    color: #39a2f8;
+}
+
+#sidemenu ul li.active>a {
+    background: transparent;
+    color: #39a2f8;
+}
+
+@media (max-width: 991.98px) {
+    #sidemenu {
+        margin-left: -300px;
+    }
+    #sidemenu.active {
+        margin-left: 0;
+    }
+}

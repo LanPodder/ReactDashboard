@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+import './SideMenuToggleButton.css';
 
 interface SideMenuToggleButtonProps{
     togglebuttonid: string,
+    onClick: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined,
 }
 
 class SideMenuToggleButton extends React.Component<SideMenuToggleButtonProps> {
     render() {
         return (
-            <button type="button" id="sidebarcollapse" className="btn btn-primary">
-                <i className="fa fa-bars"></i>
+            <button type="button" id="sidemenucollapse" className="btn btn-primary" onClick={this.props.onClick}>
+                <FontAwesomeIcon icon={faBars} />
                 <span className="sr-only">Toggle Menu</span>
             </button>
         );

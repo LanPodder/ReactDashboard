@@ -1,0 +1,35 @@
+.submenu {
+    margin-left: 10px;
+}
+
+.submenu li {
+    font-size: 14px;
+}
+
+button.dropdown-toggle {
+    padding: 10px 0;
+    display: block;
+    background: transparent;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align-last: left;
+}
+
+button.dropdown-toggle:hover {
+    color: #39a2f8;
+}
+
+button.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

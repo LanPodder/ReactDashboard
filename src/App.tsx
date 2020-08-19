@@ -9,6 +9,7 @@ import Index from './index/Index';
 import SideMenu from './sidemenu/SideMenu';
 import SideMenuToggleButton from './sidemenu/SideMenuToggleButton';
 import HeaderNav from './header-nav/HeaderNav';
+import SampleBarChart from './kpi-dashboard/sample-bar-chart/SampleBarChart';
 
 interface AppProps {
 
@@ -39,7 +40,7 @@ class App extends React.Component<AppProps, AppState> {
         <div className="wrapper d-flex align-items-stretch">
           <SideMenu active={this.state.sidemenuActive} />
 
-          <div className="p-4 p-md-5">
+          <div className="p-4 container-fluid inner-content">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
               <div className="container-fluid">
 
@@ -47,17 +48,18 @@ class App extends React.Component<AppProps, AppState> {
                 <HeaderNav />
               </div>
             </nav>
-            <Switch>
-              <Route path="/about">
-                <div />
-              </Route>
-              <Route path="/users">
-                <div />
-              </Route>
-              <Route path="/">
-                <Index />
-              </Route>
-            </Switch>
+            <div className="p-4 p-md-5">
+              <Switch>
+                <Route path="/about">
+                  <div />
+                </Route>
+                <Route path="/users">
+                  <div>Hello users</div>
+                </Route>
+                <Route path="/" exact component={Index}></Route>
+                <Route path="/dashboard" component={SampleBarChart} />
+              </Switch>
+            </div>
           </div>
         </div>
       </Router>

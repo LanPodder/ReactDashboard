@@ -12,7 +12,7 @@ interface SideMenuToggleButtonProps{
 class SideMenuToggleButton extends React.Component<SideMenuToggleButtonProps> {
     render() {
         return (
-            <button type="button" id="sidemenucollapse" className="btn btn-primary" onClick={this.props.onClick}>
+            <button type="button" id="sidemenucollapse" className="btn btn-outline-primary" onClick={this.props.onClick}>
                 <FontAwesomeIcon icon={faBars} />
                 <span className="sr-only">Toggle Menu</span>
             </button>

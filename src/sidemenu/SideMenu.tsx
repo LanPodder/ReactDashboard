@@ -17,13 +17,13 @@ class SideMenu extends React.Component<SideMenuProps> {
                 <div className="p-4 pt-5">
                     <ul className="components list-unstyled mb-5">
                         <MenuItem linkto="/" itemname="Home" />
-                        <MenuItem linkto="/" itemname="Dashboard" />
+                        <MenuItem linkto="/dashboard" itemname="Dashboard" />
                         <SubmenuItem submenuid="complexdashboardsubmenu" submenuname="ComplexDashboard">
                             <MenuItem linkto="/" itemname="Complex Dashboard 1" />
                             <MenuItem linkto="/" itemname="Complex Dashboard 2" />
                             <MenuItem linkto="/" itemname="Complex Dashboard 3" />
                         </SubmenuItem>
-                        <MenuItem linkto="/" itemname="About" />
+                        <MenuItem linkto="/users" itemname="About" />
                     </ul>
                 </div>
             </nav>

@@ -2,6 +2,7 @@ import React from 'react';
 import * as d3 from 'd3';
 import { SampleData, SampleDataService } from '../../services/SampleDataService';
 import BarChart from './BarChart';
+import { Row, Col } from 'react-bootstrap';
 
 interface SampleBarChartProps {
 
@@ -25,9 +26,16 @@ class SampleBarChart extends React.Component<SampleBarChartProps, SampleBarChart
 
     render() {
         return (
-            <div>
-                <h2>Hello Dashboard</h2>
-                <BarChart width={600} height={400} data={this.state.data.values} />
+            <div className="container-fluid">
+                <h2>Dashboard</h2>
+                <Row>
+                    <Col><BarChart width={700} height={400} data={this.dataService.getData().values} /></Col>
+                    <Col><BarChart width={700} height={400} data={this.dataService.getData().values} /></Col>
+                </Row>
+                <Row>
+                    <Col><BarChart width={700} height={400} data={this.dataService.getData().values} /></Col>
+                    <Col><BarChart width={700} height={400} data={this.dataService.getData().values} /></Col>
+                </Row>
             </div>
         );
     }

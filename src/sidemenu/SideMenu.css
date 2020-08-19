@@ -1,7 +1,7 @@
 #sidemenu {
     min-width: 300px;
     max-width: 300px;
-    height: 100vh;
+    min-height: 100vh;
     background: #1d1919;
     color: #fff;
     -webkit-transition: all 0.3s;

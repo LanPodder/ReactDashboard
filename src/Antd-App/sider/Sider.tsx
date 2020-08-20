@@ -17,9 +17,9 @@ class Sider extends React.Component {
                     defaultOpenKeys={['sub1']}
                     style={{ height: '100%', borderRight: 0 }}
                 >
-                    <Menu.SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
-                        <Menu.Item key="1"><Link to="/dashboard">Dashboard</Link></Menu.Item>
-                        <Menu.Item key="2">option2</Menu.Item>
+                    <Menu.SubMenu key="sub1" icon={<UserOutlined />} title="Generics">
+                        <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
+                        <Menu.Item key="2"><Link to="/dashboard">Dashboard</Link></Menu.Item>
                         <Menu.Item key="3">option3</Menu.Item>
                         <Menu.Item key="4">option4</Menu.Item>
                     </Menu.SubMenu>
